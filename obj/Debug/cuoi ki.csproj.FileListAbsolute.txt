@@ -1,0 +1,16 @@
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\bin\Debug\cuoi ki.exe.config
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\bin\Debug\cuoi ki.exe
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\bin\Debug\cuoi ki.pdb
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi ki.csproj.AssemblyReference.cache
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi_ki.Form1.resources
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi_ki.Properties.Resources.resources
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi ki.csproj.GenerateResource.cache
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi ki.csproj.CoreCompileInputs.cache
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi ki.exe
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi ki.pdb
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi_ki.SanPham.resources
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi_ki.NhanVien.resources
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi_ki.daily.resources
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi_ki.Xuat_kho.resources
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi_ki.Nhapkho.resources
+C:\Users\Hptngan\Desktop\CNPM\cuoi ki2\cuoi ki\obj\Debug\cuoi_ki.Doanhthu.resources
