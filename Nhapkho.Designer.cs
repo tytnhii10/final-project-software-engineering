@@ -31,12 +31,15 @@ namespace cuoi_ki
         {
             this.label7 = new System.Windows.Forms.Label();
             this.grnhap = new System.Windows.Forms.GroupBox();
+            this.dateNhap = new System.Windows.Forms.TextBox();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.cbManv = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMannhap = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.grdetail = new System.Windows.Forms.GroupBox();
+            this.cbManhap = new System.Windows.Forms.ComboBox();
             this.cbmasp = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -49,11 +52,8 @@ namespace cuoi_ki
             this.chitietnhap = new System.Windows.Forms.DataGridView();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.cbManhap = new System.Windows.Forms.ComboBox();
-            this.dateNhap = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.grnhap.SuspendLayout();
             this.grdetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chitietnhap)).BeginInit();
@@ -84,6 +84,24 @@ namespace cuoi_ki
             this.grnhap.TabIndex = 17;
             this.grnhap.TabStop = false;
             this.grnhap.Text = "Nhập kho";
+            // 
+            // dateNhap
+            // 
+            this.dateNhap.Location = new System.Drawing.Point(579, 29);
+            this.dateNhap.Name = "dateNhap";
+            this.dateNhap.Size = new System.Drawing.Size(195, 22);
+            this.dateNhap.TabIndex = 23;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.Location = new System.Drawing.Point(735, 101);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(75, 33);
+            this.btnCreate.TabIndex = 22;
+            this.btnCreate.Text = "Tạo";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // cbManv
             // 
@@ -149,6 +167,14 @@ namespace cuoi_ki
             this.grdetail.TabIndex = 18;
             this.grdetail.TabStop = false;
             this.grdetail.Text = "Chi tiết nhập";
+            // 
+            // cbManhap
+            // 
+            this.cbManhap.FormattingEnabled = true;
+            this.cbManhap.Location = new System.Drawing.Point(165, 72);
+            this.cbManhap.Name = "cbManhap";
+            this.cbManhap.Size = new System.Drawing.Size(100, 24);
+            this.cbManhap.TabIndex = 37;
             // 
             // cbmasp
             // 
@@ -251,17 +277,6 @@ namespace cuoi_ki
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(753, 511);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 33);
-            this.btnDelete.TabIndex = 20;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -273,39 +288,24 @@ namespace cuoi_ki
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnCreate
+            // btnDelete
             // 
-            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.Location = new System.Drawing.Point(735, 101);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(75, 33);
-            this.btnCreate.TabIndex = 22;
-            this.btnCreate.Text = "Tạo";
-            this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
-            // cbManhap
-            // 
-            this.cbManhap.FormattingEnabled = true;
-            this.cbManhap.Location = new System.Drawing.Point(165, 72);
-            this.cbManhap.Name = "cbManhap";
-            this.cbManhap.Size = new System.Drawing.Size(100, 24);
-            this.cbManhap.TabIndex = 37;
-            // 
-            // dateNhap
-            // 
-            this.dateNhap.Location = new System.Drawing.Point(579, 29);
-            this.dateNhap.Name = "dateNhap";
-            this.dateNhap.Size = new System.Drawing.Size(195, 22);
-            this.dateNhap.TabIndex = 23;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(753, 511);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 33);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Nhapkho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 565);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grdetail);
             this.Controls.Add(this.grnhap);
@@ -345,10 +345,10 @@ namespace cuoi_ki
         private System.Windows.Forms.DataGridView chitietnhap;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.ComboBox cbManhap;
         private System.Windows.Forms.TextBox dateNhap;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

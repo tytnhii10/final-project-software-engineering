@@ -30,6 +30,15 @@ namespace cuoi_ki
             Function.FillCombo("SELECT * FROM import", cbManhap, "idimport", "idimport");
             cbManhap.SelectedIndex = -1;
             dateNhap.Text = DateTime.Today.ToString("dd/mm/yyyy");
+
+            txtMannhap.Enabled = false;
+            cbManv.Enabled = false;
+            cbManv.Enabled = false;
+            dateNhap.Enabled = false;
+            txtmactn.Enabled = false;
+            cbmasp.Enabled = false;
+            txtsl.Enabled = false;
+            txtGia.Enabled = false;
         }
 
         private void LoadDataGridView()
@@ -61,7 +70,17 @@ namespace cuoi_ki
             txtsl.Text = "";
             txtGia.Text = "";
             dateNhap.Text = DateTime.Now.ToShortDateString();
+            txtMannhap.Enabled = true;
+            cbManv.Enabled = true;
+            cbManv.Enabled = true;
+            dateNhap.Enabled = true;
+            txtmactn.Enabled = false;
+            cbmasp.Enabled = true;
+            txtsl.Enabled = false;
+            txtGia.Enabled = false;
             txtMannhap.Focus();
+
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)

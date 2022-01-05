@@ -33,7 +33,6 @@ namespace cuoi_ki
             this.dateXuat = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.cbMaxuat = new System.Windows.Forms.ComboBox();
@@ -56,8 +55,7 @@ namespace cuoi_ki
             this.grxuat = new System.Windows.Forms.GroupBox();
             this.cbDaily = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtTong = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chitietxuat)).BeginInit();
             this.grdetail.SuspendLayout();
             this.grxuat.SuspendLayout();
@@ -94,7 +92,7 @@ namespace cuoi_ki
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(677, 599);
+            this.btnSave.Location = new System.Drawing.Point(683, 530);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 33);
             this.btnSave.TabIndex = 27;
@@ -102,20 +100,10 @@ namespace cuoi_ki
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(758, 599);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 33);
-            this.btnDelete.TabIndex = 26;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(596, 599);
+            this.btnAdd.Location = new System.Drawing.Point(602, 530);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 33);
             this.btnAdd.TabIndex = 25;
@@ -261,8 +249,6 @@ namespace cuoi_ki
             // 
             // grdetail
             // 
-            this.grdetail.Controls.Add(this.txtTong);
-            this.grdetail.Controls.Add(this.label7);
             this.grdetail.Controls.Add(this.cbMaxuat);
             this.grdetail.Controls.Add(this.cbmasp);
             this.grdetail.Controls.Add(this.label14);
@@ -276,7 +262,7 @@ namespace cuoi_ki
             this.grdetail.Controls.Add(this.chitietxuat);
             this.grdetail.Location = new System.Drawing.Point(23, 232);
             this.grdetail.Name = "grdetail";
-            this.grdetail.Size = new System.Drawing.Size(816, 361);
+            this.grdetail.Size = new System.Drawing.Size(816, 292);
             this.grdetail.TabIndex = 24;
             this.grdetail.TabStop = false;
             this.grdetail.Text = "Chi tiết xuất";
@@ -324,30 +310,24 @@ namespace cuoi_ki
             this.label3.TabIndex = 24;
             this.label3.Text = "Mã đại lý";
             // 
-            // label7
+            // btnDelete
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(596, 299);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 20);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Tổng tiền";
-            // 
-            // txtTong
-            // 
-            this.txtTong.Location = new System.Drawing.Point(688, 297);
-            this.txtTong.Name = "txtTong";
-            this.txtTong.Size = new System.Drawing.Size(121, 22);
-            this.txtTong.TabIndex = 39;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(764, 530);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 33);
+            this.btnDelete.TabIndex = 28;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Xuat_kho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 644);
-            this.Controls.Add(this.btnSave);
+            this.ClientSize = new System.Drawing.Size(862, 600);
             this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.grdetail);
             this.Controls.Add(this.grxuat);
@@ -371,7 +351,6 @@ namespace cuoi_ki
         private System.Windows.Forms.TextBox dateXuat;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ComboBox cbMaxuat;
@@ -394,7 +373,6 @@ namespace cuoi_ki
         private System.Windows.Forms.GroupBox grxuat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbDaily;
-        private System.Windows.Forms.TextBox txtTong;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -43,7 +43,6 @@ namespace cuoi_ki
             cbmasp.Enabled = false;
             txtsl.Enabled = false;
             txtGia.Enabled = false;
-            txtTong.ReadOnly = true;
         }
 
         private void LoadDataGridView()
@@ -124,7 +123,6 @@ namespace cuoi_ki
         private void btnSave_Click(object sender, EventArgs e)
         {
             String sql;
-            double sl;
 
             if (txtmactx.Text.Length == 0)
             {
@@ -161,7 +159,7 @@ namespace cuoi_ki
                 return;
             }
 
-            sl = Convert.ToDouble(Function.GetFieldValues(
+            /*sl = Convert.ToDouble(Function.GetFieldValues(
                 "SELECT number FROM detailimport WHERE idProduct = N'" + cbmasp.SelectedValue + "'"));
             if (Convert.ToDouble(txtsl.Text) > sl)
             {
@@ -169,7 +167,7 @@ namespace cuoi_ki
                 txtsl.Text = "";
                 txtsl.Focus();
                 return;
-            }
+            }*/
 
             /*double tong;
             tong = Convert.ToDouble(Function.GetFieldValues(
@@ -180,6 +178,19 @@ namespace cuoi_ki
                     cbMaxuat.SelectedValue + "',N'" + cbmasp.SelectedValue + "','" + txtsl.Text.Trim() + "','" + txtGia.Text.Trim() + "')";
             Function.RunSQL(sql);
             LoadDataGridView();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            String sql = "DELETE detailexport WHERE iddetailexport=N'" + txtmactx.Text + "'";
+            Class.Function.RunSqlDel(sql);
+            LoadDataGridView();
+            txtmactx.Text = "";
+            cbManv.Text = "";
+            cbMaxuat.Text = "";
+            txtsl.Text = "";
+            txtGia.Text = "";
+            dateXuat.Text = DateTime.Now.ToShortDateString();
         }
     }
 }
