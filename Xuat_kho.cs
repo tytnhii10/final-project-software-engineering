@@ -36,7 +36,6 @@ namespace cuoi_ki
 
             dateXuat.Text = DateTime.Today.ToString("dd/mm/yyyy");
             txtManxuat.Enabled = false;
-            txtmactx.Enabled = false;
             cbManv.Enabled = false;
             cbDaily.Enabled = false;
             cbMaxuat.Enabled = false;
@@ -49,17 +48,15 @@ namespace cuoi_ki
         {
             string sql = "SELECT * FROM detailexport";
             table = Class.Function.GetDataToTable(sql); //Đọc dữ liệu từ bảng
-            chitietxuat.DataSource = table; //Nguồn dữ liệu            
-            chitietxuat.Columns[0].HeaderText = "idDetailexport";
-            chitietxuat.Columns[1].HeaderText = "idExport";
-            chitietxuat.Columns[2].HeaderText = "idProduct";
-            chitietxuat.Columns[3].HeaderText = "numberofExport";
-            chitietxuat.Columns[4].HeaderText = "price";
+            chitietxuat.DataSource = table; //Nguồn dữ liệu        
+            chitietxuat.Columns[0].HeaderText = "idExport";
+            chitietxuat.Columns[1].HeaderText = "idProduct";
+            chitietxuat.Columns[2].HeaderText = "numberofExport";
+            chitietxuat.Columns[3].HeaderText = "price";
         }
 
         private void chitietxuat_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtmactx.Text = chitietxuat.CurrentRow.Cells["idDetailexport"].Value.ToString();
             cbMaxuat.Text = chitietxuat.CurrentRow.Cells["idExport"].Value.ToString();
             cbmasp.Text = chitietxuat.CurrentRow.Cells["idProduct"].Value.ToString();
             txtsl.Text = chitietxuat.CurrentRow.Cells["numberofExport"].Value.ToString();
@@ -68,13 +65,11 @@ namespace cuoi_ki
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            txtmactx.Text = "";
             cbManv.Text = "";
             cbMaxuat.Text = "";
             txtsl.Text = "";
             txtGia.Text = "";
             txtManxuat.Enabled = true;
-            txtmactx.Enabled = true;
             cbManv.Enabled = true;
             cbDaily.Enabled = true;
             cbMaxuat.Enabled = true;
@@ -124,13 +119,6 @@ namespace cuoi_ki
         {
             String sql;
 
-            if (txtmactx.Text.Length == 0)
-            {
-                MessageBox.Show("Chưa nhập mã chi tiết xuất", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtmactx.Focus();
-                return;
-            }
-
             if (cbMaxuat.Text.Length == 0)
             {
                 MessageBox.Show("Chưa nhập mã xuất", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -174,7 +162,7 @@ namespace cuoi_ki
                 "SELECT SUM(price) FROM detailexport"));
             txtTong.Text = tong.ToString();*/
 
-            sql = "INSERT INTO detailexport(idDetailexport, idExport, idProduct, numberofExport, price) VALUES (N'" + txtmactx.Text.Trim() + "',N'" +
+            sql = "INSERT INTO detailexport(idExport, idProduct, numberofExport, price) VALUES (N'" +
                     cbMaxuat.SelectedValue + "',N'" + cbmasp.SelectedValue + "','" + txtsl.Text.Trim() + "','" + txtGia.Text.Trim() + "')";
             Function.RunSQL(sql);
             LoadDataGridView();
@@ -182,10 +170,9 @@ namespace cuoi_ki
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            String sql = "DELETE detailexport WHERE iddetailexport=N'" + txtmactx.Text + "'";
+            String sql = "DELETE detailexport WHERE idExport=N'" + cbMaxuat.Text + "'";
             Class.Function.RunSqlDel(sql);
             LoadDataGridView();
-            txtmactx.Text = "";
             cbManv.Text = "";
             cbMaxuat.Text = "";
             txtsl.Text = "";

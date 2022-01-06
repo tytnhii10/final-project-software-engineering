@@ -55,7 +55,7 @@ namespace cuoi_ki
             this.thoát});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(839, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(839, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -129,9 +129,9 @@ namespace cuoi_ki
             // 
             this.pnlContent.BackColor = System.Drawing.Color.White;
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(0, 28);
+            this.pnlContent.Location = new System.Drawing.Point(0, 30);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(839, 606);
+            this.pnlContent.Size = new System.Drawing.Size(839, 604);
             this.pnlContent.TabIndex = 3;
             // 
             // Form1

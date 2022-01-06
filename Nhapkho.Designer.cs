@@ -45,10 +45,8 @@ namespace cuoi_ki
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtsl = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
-            this.txtmactn = new System.Windows.Forms.TextBox();
             this.chitietnhap = new System.Windows.Forms.DataGridView();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -156,10 +154,8 @@ namespace cuoi_ki
             this.grdetail.Controls.Add(this.label13);
             this.grdetail.Controls.Add(this.label12);
             this.grdetail.Controls.Add(this.label2);
-            this.grdetail.Controls.Add(this.label10);
             this.grdetail.Controls.Add(this.txtsl);
             this.grdetail.Controls.Add(this.txtGia);
-            this.grdetail.Controls.Add(this.txtmactn);
             this.grdetail.Controls.Add(this.chitietnhap);
             this.grdetail.Location = new System.Drawing.Point(12, 214);
             this.grdetail.Name = "grdetail";
@@ -171,15 +167,15 @@ namespace cuoi_ki
             // cbManhap
             // 
             this.cbManhap.FormattingEnabled = true;
-            this.cbManhap.Location = new System.Drawing.Point(165, 72);
+            this.cbManhap.Location = new System.Drawing.Point(154, 29);
             this.cbManhap.Name = "cbManhap";
-            this.cbManhap.Size = new System.Drawing.Size(100, 24);
+            this.cbManhap.Size = new System.Drawing.Size(121, 24);
             this.cbManhap.TabIndex = 37;
             // 
             // cbmasp
             // 
             this.cbmasp.FormattingEnabled = true;
-            this.cbmasp.Location = new System.Drawing.Point(470, 25);
+            this.cbmasp.Location = new System.Drawing.Point(154, 69);
             this.cbmasp.Name = "cbmasp";
             this.cbmasp.Size = new System.Drawing.Size(121, 24);
             this.cbmasp.TabIndex = 36;
@@ -188,7 +184,7 @@ namespace cuoi_ki
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(22, 72);
+            this.label14.Location = new System.Drawing.Point(27, 29);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(73, 20);
             this.label14.TabIndex = 35;
@@ -198,7 +194,7 @@ namespace cuoi_ki
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(335, 29);
+            this.label13.Location = new System.Drawing.Point(27, 69);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(110, 20);
             this.label13.TabIndex = 34;
@@ -208,7 +204,7 @@ namespace cuoi_ki
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(335, 69);
+            this.label12.Location = new System.Drawing.Point(478, 69);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(115, 20);
             this.label12.TabIndex = 33;
@@ -218,42 +214,25 @@ namespace cuoi_ki
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(647, 27);
+            this.label2.Location = new System.Drawing.Point(478, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 20);
             this.label2.TabIndex = 31;
             this.label2.Text = "Giá";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(22, 30);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 20);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Mã chi tiết nhập";
-            // 
             // txtsl
             // 
-            this.txtsl.Location = new System.Drawing.Point(470, 67);
+            this.txtsl.Location = new System.Drawing.Point(614, 69);
             this.txtsl.Name = "txtsl";
             this.txtsl.Size = new System.Drawing.Size(121, 22);
             this.txtsl.TabIndex = 27;
             // 
             // txtGia
             // 
-            this.txtGia.Location = new System.Drawing.Point(688, 27);
+            this.txtGia.Location = new System.Drawing.Point(614, 29);
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(100, 22);
             this.txtGia.TabIndex = 26;
-            // 
-            // txtmactn
-            // 
-            this.txtmactn.Location = new System.Drawing.Point(165, 29);
-            this.txtmactn.Name = "txtmactn";
-            this.txtmactn.Size = new System.Drawing.Size(100, 22);
-            this.txtmactn.TabIndex = 24;
             // 
             // chitietnhap
             // 
@@ -338,10 +317,8 @@ namespace cuoi_ki
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtsl;
         private System.Windows.Forms.TextBox txtGia;
-        private System.Windows.Forms.TextBox txtmactn;
         private System.Windows.Forms.DataGridView chitietnhap;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button btnAdd;

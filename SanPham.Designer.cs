@@ -70,7 +70,7 @@ namespace cuoi_ki
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(596, 54);
+            this.btnSave.Location = new System.Drawing.Point(616, 54);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 33);
             this.btnSave.TabIndex = 19;
@@ -81,7 +81,7 @@ namespace cuoi_ki
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(500, 54);
+            this.btnAdd.Location = new System.Drawing.Point(535, 54);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 33);
             this.btnAdd.TabIndex = 18;
@@ -92,7 +92,7 @@ namespace cuoi_ki
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(688, 54);
+            this.btnDelete.Location = new System.Drawing.Point(697, 54);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 33);
             this.btnDelete.TabIndex = 16;
@@ -102,14 +102,14 @@ namespace cuoi_ki
             // 
             // txtTensp
             // 
-            this.txtTensp.Location = new System.Drawing.Point(475, 16);
+            this.txtTensp.Location = new System.Drawing.Point(484, 16);
             this.txtTensp.Name = "txtTensp";
             this.txtTensp.Size = new System.Drawing.Size(288, 22);
             this.txtTensp.TabIndex = 11;
             // 
             // txtMasp
             // 
-            this.txtMasp.Location = new System.Drawing.Point(138, 18);
+            this.txtMasp.Location = new System.Drawing.Point(148, 18);
             this.txtMasp.Name = "txtMasp";
             this.txtMasp.Size = new System.Drawing.Size(81, 22);
             this.txtMasp.TabIndex = 6;

@@ -35,7 +35,6 @@ namespace cuoi_ki
             cbManv.Enabled = false;
             cbManv.Enabled = false;
             dateNhap.Enabled = false;
-            txtmactn.Enabled = false;
             cbmasp.Enabled = false;
             txtsl.Enabled = false;
             txtGia.Enabled = false;
@@ -45,17 +44,15 @@ namespace cuoi_ki
         {
             string sql = "SELECT * FROM detailimport";
             table = Class.Function.GetDataToTable(sql); //Đọc dữ liệu từ bảng
-            chitietnhap.DataSource = table; //Nguồn dữ liệu            
-            chitietnhap.Columns[0].HeaderText = "iddetailimport";
-            chitietnhap.Columns[1].HeaderText = "idImport";
-            chitietnhap.Columns[2].HeaderText = "idProduct";
-            chitietnhap.Columns[3].HeaderText = "number";
-            chitietnhap.Columns[4].HeaderText = "price";
+            chitietnhap.DataSource = table; //Nguồn dữ liệu        
+            chitietnhap.Columns[0].HeaderText = "idImport";
+            chitietnhap.Columns[1].HeaderText = "idProduct";
+            chitietnhap.Columns[2].HeaderText = "number";
+            chitietnhap.Columns[3].HeaderText = "price";
         }
 
         private void chitietnhap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtmactn.Text = chitietnhap.CurrentRow.Cells["iddetailimport"].Value.ToString();
             cbManhap.Text = chitietnhap.CurrentRow.Cells["idImport"].Value.ToString();
             cbmasp.Text = chitietnhap.CurrentRow.Cells["idProduct"].Value.ToString();
             txtsl.Text = chitietnhap.CurrentRow.Cells["number"].Value.ToString();
@@ -64,7 +61,6 @@ namespace cuoi_ki
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            txtmactn.Text = "";
             cbManv.Text = "";
             cbManhap.Text = "";
             txtsl.Text = "";
@@ -74,18 +70,44 @@ namespace cuoi_ki
             cbManv.Enabled = true;
             cbManv.Enabled = true;
             dateNhap.Enabled = true;
-            txtmactn.Enabled = false;
             cbmasp.Enabled = true;
-            txtsl.Enabled = false;
-            txtGia.Enabled = false;
+            txtsl.Enabled = true;
+            txtGia.Enabled = true;
             txtMannhap.Focus();
-
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            String sql = "INSERT INTO detailimport(iddetailimport, idImport, idProduct, number, price) VALUES (N'" + txtmactn.Text.Trim() + "',N'" +
+            if (cbManhap.Text.Length == 0)
+            {
+                MessageBox.Show("Chưa nhập mã nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cbManhap.Focus();
+                return;
+            }
+
+            if (cbmasp.Text.Length == 0)
+            {
+                MessageBox.Show("Chưa nhập mã sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cbmasp.Focus();
+                return;
+            }
+
+            if (txtsl.Text.Length == 0)
+            {
+                MessageBox.Show("Chưa nhập số lượng xuất", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtsl.Focus();
+                return;
+            }
+
+            if (txtGia.Text.Length == 0)
+            {
+                MessageBox.Show("Chưa nhập giá", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtGia.Focus();
+                return;
+            }
+
+
+            String sql = "INSERT INTO detailimport(idImport, idProduct, number, price) VALUES (N'" +
                     cbManhap.SelectedValue + "',N'" + cbmasp.SelectedValue + "','" + txtsl.Text.Trim() + "','" + txtGia.Text.Trim() + "')";
             Function.RunSQL(sql);
             LoadDataGridView();
@@ -94,6 +116,27 @@ namespace cuoi_ki
         private void btnCreate_Click(object sender, EventArgs e)
         {
             String sql;
+            if (txtMannhap.Text.Length == 0)
+            {
+                MessageBox.Show("Chưa nhập mã nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMannhap.Focus();
+                return;
+            }
+
+            if (cbManv.Text.Length == 0)
+            {
+                MessageBox.Show("Chưa nhập mã nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cbManv.Focus();
+                return;
+            }
+
+            if (dateNhap.Text.Length == 0)
+            {
+                MessageBox.Show("Chưa nhập ngày nhập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dateNhap.Focus();
+                return;
+            }
+
             sql = "INSERT INTO import(idImport, idStaffs, dateImport) VALUES (N'" + txtMannhap.Text.Trim() + "',N'" +
                           cbManv.SelectedValue + "','" + Function.ConvertDateTime(dateNhap.Text.Trim()) + "')";
             Function.RunSQL(sql);
@@ -101,10 +144,9 @@ namespace cuoi_ki
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            String sql = "DELETE detailimport WHERE iddetailimport=N'" + txtmactn.Text + "'";
+            String sql = "DELETE detailimport WHERE idImport=N'" + txtMannhap.Text + "'";
             Class.Function.RunSqlDel(sql);
             LoadDataGridView();
-            txtmactn.Text = "";
             cbManv.Text = "";
             cbManhap.Text = "";
             txtsl.Text = "";
