@@ -71,11 +71,11 @@
     <Compile Include="NhanVien.Designer.cs">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nhapkho.cs">
+    <Compile Include="NhapKho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nhapkho.Designer.cs">
-      <DependentUpon>Nhapkho.cs</DependentUpon>
+    <Compile Include="NhapKho.Designer.cs">
+      <DependentUpon>NhapKho.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,11 +85,11 @@
     <Compile Include="SanPham.Designer.cs">
       <DependentUpon>SanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Xuat_kho.cs">
+    <Compile Include="Xuatkho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Xuat_kho.Designer.cs">
-      <DependentUpon>Xuat_kho.cs</DependentUpon>
+    <Compile Include="Xuatkho.Designer.cs">
+      <DependentUpon>Xuatkho.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="daily.resx">
       <DependentUpon>daily.cs</DependentUpon>
@@ -103,8 +103,8 @@
     <EmbeddedResource Include="NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nhapkho.resx">
-      <DependentUpon>Nhapkho.cs</DependentUpon>
+    <EmbeddedResource Include="NhapKho.resx">
+      <DependentUpon>NhapKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,8 +118,8 @@
     <EmbeddedResource Include="SanPham.resx">
       <DependentUpon>SanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Xuat_kho.resx">
-      <DependentUpon>Xuat_kho.cs</DependentUpon>
+    <EmbeddedResource Include="Xuatkho.resx">
+      <DependentUpon>Xuatkho.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">

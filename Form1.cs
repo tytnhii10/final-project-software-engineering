@@ -39,7 +39,7 @@ namespace cuoi_ki
 
         private void xuấtKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Xuat_kho x = new Xuat_kho();
+            Xuatkho x = new Xuatkho();
             AddForm(x);
         }
 
@@ -57,7 +57,7 @@ namespace cuoi_ki
 
         private void nhậpKhoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Nhapkho nhap = new Nhapkho();
+            NhapKho nhap = new NhapKho();
             AddForm(nhap);
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -70,9 +70,5 @@ namespace cuoi_ki
             Application.Exit();
         }
 
-        private void Doanhthu_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
